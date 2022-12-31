@@ -1,0 +1,204 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap');
+
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// font-family: 'IBM Plex Sans', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased!important;
+}
+
+.welcome_banner{
+    // background-image: radial-gradient(circle, #99154e, #93144b, #8d1247, #881144, #821041, #7e0f3f, #7a0e3c, #760d3a, #730c38, #6f0c36, #6c0b35, #690a33),url('assets/background/banner.jpg');
+    background-image: linear-gradient(to bottom,rgba(153,21,78,0.68),rgba(147,20,75,0.65),rgba(141,18,71,0.60),rgba(136,17,68,.65),rgba(130,16,65,0.65),rgba(126,15,63,0.65),rgba(122,14,60,0.65),rgba(118,13,58,0.65),rgba(115,12,56,.60),rgba(111,12,54,.60),rgba(108,11,53,.65),rgba(105,10,51,.60)),url('assets/background/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin-top: -6rem;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .banner_content{
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+
+        .caption{
+            background: rgba(0,0,0, 0.3);
+            border-radius: 4px;
+            margin-top: 10rem;
+            text-align: center;
+            padding: 3rem 3rem;
+            h1{
+                font-size: 2.7rem;
+                margin-bottom: 1rem;
+                font-weight: 300;
+            }
+            p{
+                font-size: 1.2rem;
+                line-height: 1.9;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+        .banner_cta{
+            margin: 1.5rem 0 !important;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input{
+                width: 80%;
+                border: 1px solid #fff;
+                padding: 1rem;
+                background: transparent;
+                font-size: 1rem;
+                font-family: 'Montserrat', sans-serif;
+
+                &::placeholder{
+                    color: #f9f9f9;
+                    font-size: 1rem;
+                    padding: 0 8px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                &:focus{
+                    outline: none !important;
+                    background: transparent;
+                    color: #fff;
+                }
+            }
+            button{
+                width: 20%;
+                padding: 1rem;
+                background: #00c9b7;
+                color: #fff;
+                font-size: 1rem;
+                border: 1px solid #fff;
+                border-left: 0;
+            }
+        }
+    }
+}
+
+.section_header{
+    color: #5c5c5c !important;
+    font-weight: 400 !important;
+    font-size: 1.6rem !important;
+}
+
+.card_headers{
+    color: #4a4a4a !important;
+    font-weight: 400 !important;
+    font-size: 1.3rem !important;
+}
+.card_text{
+    color: #5c5c5c !important;
+    // font-weight: 400 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.8;
+}
+
+.section_title{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #3e3e3e;
+    font-weight: 400;
+    margin: 1.5rem 0 2rem;
+}
+
+.v-card__actions{
+    .v-btn{
+        i:not(i.uil-trash-alt){
+            font-size: 1rem;
+            color: #003864;
+        }
+    }
+}
+
+.table .list tr{
+    height: 2rem !important;
+    td{
+        vertical-align: middle !important;
+        white-space: nowrap !important;
+
+        i{
+            font-size: .95rem;
+        }
+    }
+}
+
+.upper_row{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    // margin-bottom: -4.5rem;
+    // padding: 0 3rem;
+    .search{
+        margin: 0 auto;
+        width: 100%;
+
+        .search_field{
+            width: 80%;
+            margin: 0 auto;
+            input[type="text"]{
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:722px) {
+     .upper_row{
+         grid-template-columns: 1fr;
+         gap: 1rem;
+         margin: 0 auto;
+         width: 100%;
+         margin-bottom: 1.5rem;
+         margin-right: 2rem;
+
+        .search{
+            margin-right: 2rem;
+            margin: 0 auto;
+            width: 90%;
+
+            .search_field{
+                width: 100%;
+
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.v-btn i{
+    font-size: 1rem !important;
+}
+
+table tbody.list tr{
+    cursor: pointer;
+}
